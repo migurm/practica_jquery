@@ -269,7 +269,15 @@ body{
     position: absolute;
     bottom: 2rem; /* hace que se quede fijo y con el tamaño de diferencia hasta el final */
     font-size: 1.2rem;
+    opacity: 0; /* Esta linea y la siguiente son las encargadas junto con la clase siguiente de la animacion de carga de footer*/
+    transition: opacity 0.5s ease;
 }
+
+.user-info__footer.show{
+    opacity: 1;
+}
+
+
 
 /* contenedor principal */
 .layout__content{
