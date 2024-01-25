@@ -139,5 +139,6 @@ Tiene que tener esta pinta:
 
 document.addEventListener('DOMContentLoaded', function(){
 	carga_jquery();
+	
 	carga_footer();
 });

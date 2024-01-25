@@ -34,7 +34,7 @@ $(document).ready(function(){
     $(document).on('mousemove', function(event) {
         var timestamp = event.timeStamp;
         var ejeY = event.pageY;
-        console.log(`Evento de raton en el tiempo: ${timestamp} y estoy en la posicio Y: ${ejeY}`);
+        //console.log(`Evento de raton en el tiempo: ${timestamp} y estoy en la posicio Y: ${ejeY}`);
     })
 
 
