@@ -12,6 +12,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+
 body{
     min-height: 100vh; /* ocupa el 100% de la altura vertical que tiene el navegador */
     scroll-behavior: smooth; /* scroll suavizado */
@@ -145,6 +146,7 @@ body{
     /*background-color: var(--color-secondary);*/
     background-color: var(--color-blue-traslucent);
     color: var(--color-principal);
+
 }
 
 .user-info__container-image{
@@ -399,8 +401,9 @@ body{
     min-height: 100%;
     padding: 5rem !important;
     padding-right: 3rem !important;
-    overflow: auto;   
+    overflow:auto;   
 }
+
 
 .about__header, .resume__header, .portafolio__header, 
 .blog__header, .contact__header{

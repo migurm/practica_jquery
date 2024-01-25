@@ -94,10 +94,6 @@ function carga_jquery(){
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"></link>
 <script src="js/funciones_jquery.js"></script>
-
-
-
-
 */
 
 
@@ -137,8 +133,16 @@ Tiene que tener esta pinta:
 
 
 
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function(){
 	carga_jquery();
-	
 	carga_footer();
 });
