@@ -32,8 +32,33 @@ function carga_css(){
 	responsive.setAttribute('href', 'css/responsive.css');
 	document.head.appendChild(responsive);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Función para cargar los recursos necesarios de JQUERY
 function carga_jquery(){
+	console.log("Cargando jquery...");
 	//JQuery 1/3
 	let link_1 = document.createElement("script");
 	link_1.setAttribute('src', 'https://code.jquery.com/jquery-3.7.1.js');
@@ -48,12 +73,45 @@ function carga_jquery(){
 	link_2.setAttribute('crossorigin', 'anonymous');
 	document.head.appendChild(link_2);
 
-	//JQuery 3/3
+	//JQuery 3/3 (css)
 	let link_3 = document.createElement("link");
 	link_3.setAttribute('rel', 'stylesheet');
 	link_3.setAttribute('href', 'https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css');
 	document.head.appendChild(link_3);	
+
+	//JQuery propio
+	let link_4 = document.createElement("script");
+	link_4.setAttribute('src', 'js/funciones_jquery.js');
+	document.head.appendChild(link_4);
+	
+
 }
+
+
+
+/*
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"></link>
+<script src="js/funciones_jquery.js"></script>
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function carga_footer(){
 //Tiene que ser el último hijo de section class="aside__user-info"
