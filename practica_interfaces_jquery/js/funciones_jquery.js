@@ -17,9 +17,26 @@ function localizacion_actual () {
 }
 
 
+function cambio_vista(){
+    let hoja_css = $('#dark_mode'); //Almacenamos el id de la hoja de estilo modo oscuro
+    let cambio_modo = !hoja_css.prop('disabled'); //Almacenamos la contraria a la que tengamos
+    hoja_css.prop('disabled', cambio_modo); //Establecemos la propiedad disabled a su nuevo valor
+
+    sessionStorage.setItem('modo_oscuro', cambio_modo.toString()); //Almacenamos modo_oscuro true / false depende del estado
+    console.log("cambiamos de vista"); //Mensaje orientativo
+}
+
+
+
+
+
+
 //Cuando todo esté listo:
 
 $(document).ready(function(){
+    var modo_oscuro_activo = sessionStorage.getItem('modo_oscuro') === 'true'; //Vemos el modo en el que andamos
+    if(!modo_oscuro_activo) cambio_vista(); //Aplicamos el estilo
+    $('#cambio_vista').on('click', cambio_vista); //Asignamos el evento al botón de cambio de vista
     console.log("Cargando jquery propio...");
     console.log("Hola desde jquery!");
     //Actuaciones jQuery generales.
@@ -28,6 +45,7 @@ $(document).ready(function(){
     $('.user-info__btn').on('click', function(){
         console.log("Todavía no se programó la descarga del CV");
     })
+    
 
 
     //Funcion de prueba de timeStamp, perfecto, almacena el momento exacto del movimiento.
