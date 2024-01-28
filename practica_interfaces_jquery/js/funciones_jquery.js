@@ -36,7 +36,8 @@ function cambio_vista(){
 $(document).ready(function(){
     var modo_oscuro_activo = sessionStorage.getItem('modo_oscuro') === 'true'; //Vemos el modo en el que andamos
     if(!modo_oscuro_activo) cambio_vista(); //Aplicamos el estilo
-    $('#cambio_vista').on('click', cambio_vista); //Asignamos el evento al botón de cambio de vista
+    $('#cambio_vista').on('click', cambio_vista); //Asignamos el evento al botón de cambio de vistaç
+    
     console.log("Cargando jquery propio...");
     console.log("Hola desde jquery!");
     //Actuaciones jQuery generales.
@@ -44,6 +45,7 @@ $(document).ready(function(){
     //Función para la descarga del CV... POR HACER
     $('.user-info__btn').on('click', function(){
         console.log("Todavía no se programó la descarga del CV");
+
     })
     
 
