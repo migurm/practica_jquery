@@ -70,6 +70,10 @@ $(document).ready(function(){
         break;
         case "contacto.html":
             console.log("Página para contactar conmigo");
+            //Agregamos el selector de fecha jquery
+            $(".selector_fecha").datepicker({
+                dateFormat: 'dd-mm-yy'
+            });
         break;
         case "curriculum.html":
             console.log("Mi curriculum");

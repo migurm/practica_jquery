@@ -65,4 +65,10 @@ body{
 
     color: var(--color-secondary);
 }
+.contact__icon{
+    color: var(--color-purple-traslucent);
+}
 
+.contact__data {
+    color: var(--color-purple-traslucent);
+}
