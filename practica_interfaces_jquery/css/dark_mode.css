@@ -1,5 +1,5 @@
 :root{
-    --color-principal: #FFFFFF;
+    --color-principal: #ffffff;
     --color-secondary: #04B4E0;
 
     --color-background: #F2F7F9;
@@ -14,9 +14,55 @@
     --color-company: #A5A6A7;
 
     --color-white-traslucent: #ffffffab; /*New color for traslucent white*/
+    --color-dark-traslucent: #20202093;
     --color-blue-traslucent: #04b4e069;
+
+    --color-purple-traslucent: #3c005869;
 }
 
 body{
     background-image: url("../img/fondo_noche.gif");
 }
+
+.aside__user-info{
+    /*background-color: var(--color-secondary);*/
+    background-color: var(--color-purple-traslucent);
+    color: var(--color-principal);
+
+}
+.content__page{
+    /*background-color: var(--color-principal); */
+    background-color: var(--color-dark-traslucent);
+}
+
+.page__name{
+    color: var(--color-principal);
+}
+
+.page__job{
+    color: var(--color-principal);
+}
+
+.layout__content{
+    background-color: var(--color-purple-traslucent);
+}
+.menu__list{
+    background-color: var(--color-purple-traslucent);
+}
+.menu__link--active .menu__icon{
+    color: var(--color-principal); 
+}
+.menu__option:hover .menu__icon{
+    color: var(--color-principal); 
+}
+
+body{
+
+    color: var(--color-principal);
+}
+
+.prices__number{
+
+    color: var(--color-secondary);
+}
+

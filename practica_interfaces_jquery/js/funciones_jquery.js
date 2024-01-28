@@ -37,7 +37,6 @@ $(document).ready(function(){
     var modo_oscuro_activo = sessionStorage.getItem('modo_oscuro') === 'true'; //Vemos el modo en el que andamos
     if(!modo_oscuro_activo) cambio_vista(); //Aplicamos el estilo
     $('#cambio_vista').on('click', cambio_vista); //Asignamos el evento al botón de cambio de vistaç
-    
     console.log("Cargando jquery propio...");
     console.log("Hola desde jquery!");
     //Actuaciones jQuery generales.
@@ -74,6 +73,20 @@ $(document).ready(function(){
         break;
         case "curriculum.html":
             console.log("Mi curriculum");
+            //Agregamos los pop ups para los cerfiticados.
+            $('.certificate__img').on('click', function(){
+                var imagen_certificado = $(this).attr('src');//Nos traemos la imagen
+                var contenido_popup = `<img src="${imagen_certificado}" alt="certificado">`;
+                $('.resume__popup').html(contenido_popup);
+                console.log(imagen_certificado);
+                $('.resume__popup, .resume__popup-overlay').show();
+            });
+            //Y que se oculten al pulsar fuera de ellos.
+            $('.resume__popup-overlay').on('click', function () {
+                $('.resume__popup, .resume__popup-overlay').hide();
+                console.log("CierrA!!!");
+            });
+
         break;
         case "portafolio.html":
             console.log("El portafolio, muy importante");
