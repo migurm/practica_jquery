@@ -48,7 +48,18 @@ function volver_arriba(){
     });
 }
 
+function transicion(){
+    $('a').on('click', function(event) {
+        event.preventDefault();
+        var nueva_pagina = this.href;
+        console.log("Salta el evento de transicion");
+        $('body').fadeOut(300, function(){
+            window.location = nueva_pagina;
+        });
+    });
 
+    $('body').hide().fadeIn(300);
+}
 
 
 
@@ -56,6 +67,7 @@ function volver_arriba(){
 
 $(document).ready(function(){
     volver_arriba();
+    transicion();
     var modo_oscuro_activo = sessionStorage.getItem('modo_oscuro') === 'true'; //Vemos el modo en el que andamos
     if(!modo_oscuro_activo) cambio_vista(); //Aplicamos el estilo
     $('#cambio_vista').on('click', cambio_vista); //Asignamos el evento al botón de cambio de vistaç

@@ -45,6 +45,16 @@ function carga_css(){
 
 
 
+/*
+<link src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+<link src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="js/funciones_jquery.js"></script>
+
+
+
+
+*/
 
 
 
@@ -54,35 +64,35 @@ function carga_css(){
 
 
 
-
-
+//Esta funcionalidad me está dando malas transiciones.
 //Función para cargar los recursos necesarios de JQUERY
+
 function carga_jquery(){
 	console.log("Cargando jquery...");
-	//JQuery 1/3
-	let link_1 = document.createElement("script");
-	link_1.setAttribute('src', 'https://code.jquery.com/jquery-3.7.1.js');
-	link_1.setAttribute('integrity', 'sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=');
-	link_1.setAttribute('crossorigin', 'anonymous');
-	document.head.appendChild(link_1);
+	//JQuery 1/3 
+	let script_1 = document.createElement("script");
+	script_1.setAttribute('src', 'https://code.jquery.com/jquery-3.7.1.js');
+	script_1.setAttribute('integrity', 'sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=');
+	script_1.setAttribute('crossorigin', 'anonymous');
+	document.body.appendChild(script_1);
 
 	//JQuery 2/3
-	let link_2 = document.createElement("script");	
-	link_2.setAttribute('src', 'https://code.jquery.com/ui/1.13.2/jquery-ui.js');
-	link_2.setAttribute('integrity', 'sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=');
-	link_2.setAttribute('crossorigin', 'anonymous');
-	document.head.appendChild(link_2);
+	let script_2 = document.createElement("script");	
+	script_2.setAttribute('src', 'https://code.jquery.com/ui/1.13.2/jquery-ui.js');
+	script_2.setAttribute('integrity', 'sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=');
+	script_2.setAttribute('crossorigin', 'anonymous');
+	document.body.appendChild(script_2);
 
 	//JQuery 3/3 (css)
-	let link_3 = document.createElement("link");
-	link_3.setAttribute('rel', 'stylesheet');
-	link_3.setAttribute('href', 'https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css');
-	document.head.appendChild(link_3);	
+	let link_1 = document.createElement("link");
+	link_1.setAttribute('rel', 'stylesheet');
+	link_1.setAttribute('href', 'https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css');
+	document.head.appendChild(link_1);	
 
 	//JQuery propio
-	let link_4 = document.createElement("script");
-	link_4.setAttribute('src', 'js/funciones_jquery.js');
-	document.head.appendChild(link_4);
+	let script_4 = document.createElement("script");
+	script_4.setAttribute('src', 'js/funciones_jquery.js');
+	document.body.appendChild(script_4);
 	
 
 }
@@ -92,7 +102,7 @@ function carga_jquery(){
 /*
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"></link>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"></script>
 <script src="js/funciones_jquery.js"></script>
 */
 
