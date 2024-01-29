@@ -1453,3 +1453,29 @@ body{
     padding: 15px;
     border-radius: 4px;
 }
+
+#menu_hamburguesa {
+    display: none;
+}
+
+#div_acordeon {
+    width: 100%;
+    margin: 0 auto;
+    color: var(--color-principal)
+}
+
+#div_acordeon h3 {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: normal;
+    border-bottom: 1px solid #666;
+}
+
+#div_acordeon .portfolio__gallery {
+    padding: 20px;
+    background: #f7f7f7;
+    color: #333;
+}

@@ -48,17 +48,37 @@ function volver_arriba(){
     });
 }
 
+
+function menu_hamburguesa(){
+    var toggleButtomMenu = $('#menu_hamburguesa');
+    var menuLeft = $('.layout__menu');
+    var overlay = $('#overlay');
+    
+    toggleButtomMenu.on("click", function () {
+        console.log("pulso el menu");
+        if (toggleButtomMenu.hasClass("fa-close")) {
+            menuLeft.hide();
+        } else {
+            menuLeft.show();
+        }
+    });
+    
+    overlay.on("click", function () {
+        menuLeft.hide();
+    });
+}
+
 function transicion(){
-    $('a').on('click', function(event) {
+    $('a.transicion').on('click', function(event) {
         event.preventDefault();
         var nueva_pagina = this.href;
         console.log("Salta el evento de transicion");
-        $('body').fadeOut(300, function(){
+        $('body').fadeOut(500, function(){
             window.location = nueva_pagina;
         });
     });
 
-    $('body').hide().fadeIn(300);
+    $('body').hide().fadeIn(500);
 }
 
 
@@ -68,6 +88,8 @@ function transicion(){
 $(document).ready(function(){
     volver_arriba();
     transicion();
+    menu_hamburguesa();
+    
     var modo_oscuro_activo = sessionStorage.getItem('modo_oscuro') === 'true'; //Vemos el modo en el que andamos
     if(!modo_oscuro_activo) cambio_vista(); //Aplicamos el estilo
     $('#cambio_vista').on('click', cambio_vista); //Asignamos el evento al botón de cambio de vistaç
@@ -159,6 +181,9 @@ $(document).ready(function(){
         break;
         case "portafolio.html":
             console.log("El portafolio, muy importante");
+            $(document).ready(function() {
+                $("#div_acordeon").accordion();
+            });
         break;
         case "sobre-mi.html":
             console.log("Alguna información sobre mi");
