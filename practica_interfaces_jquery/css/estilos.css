@@ -1122,7 +1122,7 @@ body{
     flex-flow: row wrap;
 }
 .articles__article{
-    flex-basis: 50%;
+    flex-basis: 100%; /*CASI ME VUELVO LOCO, EL SWIPER SACABA LOS ELEMENTOS DE 2 EN 2 POR EL 50%*/
     padding: 0 1.5rem;
     padding-bottom: 3.5rem;
 }
@@ -1379,4 +1379,33 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 
+}
+
+
+.blog__articles {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.swiper-container {
+    width: 100%; 
+}
+
+.swiper-slide {
+    text-align: center; 
+    box-sizing: border-box;
+    padding: 20px; 
+}
+
+.article__top,
+.article__bottom {
+    margin-bottom: 10px; 
+}
+.content__page.content__blog {
+    position: relative; 
+}
+
+.swiper-container {
+    width: 100%; 
+    height: 100%; 
 }

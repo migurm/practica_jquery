@@ -67,6 +67,23 @@ $(document).ready(function(){
         break;
         case "blog.html":
             console.log("Un buen blog siempre entra bien");
+            $(document).ready(function(){
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 1,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                      },
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                });
+
+
+            });
+            
+
         break;
         case "contacto.html":
             console.log("Página para contactar conmigo");
